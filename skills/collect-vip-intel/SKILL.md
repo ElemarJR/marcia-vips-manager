@@ -21,17 +21,18 @@ targets:
 
 ## Fonte de verdade (lista VIP)
 
-- `vault/vips/lista-vips.md`
+- `MARCIA_MEMORY_REPO=/srv/marcia-memory` (canônico)
+- Lista VIP: `vault/vips/lista-vips.md`
   - Seção **Empresas**: lista numerada com nomes
   - Seção **Pessoas**: linhas `Pessoa — Empresa`
 
 ## Saídas
 
 1) Arquivo diário (data do **dia anterior** em SP):
-- `vault/vips/daily/YYYY-MM-DD.md`
+- `/srv/marcia-memory/vault/vips/daily/YYYY-MM-DD.md`
 
 2) Estado (dedupe/histórico):
-- `vault/_estado/vips-intel-state.json`
+- `/srv/marcia-memory/data/vips/vips-intel-state.json`
 
 ## Execução (batch diário)
 

@@ -6,8 +6,8 @@ Objetivo: manter a rotina de VIPs rodando sozinha, para liberar a Márcia princi
 
 1) **Gerar intel do dia anterior**
 - Rodar a skill `collect-vip-intel`.
-- Garantir que o output foi gerado em `vault/vips/daily/YYYY-MM-DD.md`.
-- Atualizar estado em `vault/_estado/vips-intel-state.json`.
+- Garantir que o output foi gerado em `/srv/marcia-memory/vault/vips/daily/YYYY-MM-DD.md`.
+- Atualizar estado em `/srv/marcia-memory/data/vips/vips-intel-state.json`.
 
 2) **Checklist de qualidade (rápido)**
 - Pessoas: tem LinkedIn para todas as pessoas VIP (ou mensagem explícita “aguardando aba anexada”)?

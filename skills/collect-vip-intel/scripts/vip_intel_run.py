@@ -27,11 +27,19 @@ try:
 except Exception:
     ZoneInfo = None
 
-WS = "/root/.openclaw/workspace"
-VAULT = os.path.join(WS, "vault")
+from pathlib import Path
+
+# Workspace root (this agent's repo) — robust even if cwd changes
+WORKSPACE = str(Path(__file__).resolve().parents[3])
+
+# Canonical memory repo (no symlinks). This is the source of truth.
+MARCIA_MEMORY_REPO = os.environ.get("MARCIA_MEMORY_REPO", "/srv/marcia-memory")
+VAULT = os.path.join(MARCIA_MEMORY_REPO, "vault")
+DATA = os.path.join(MARCIA_MEMORY_REPO, "data")
+
 VIP_LIST = os.path.join(VAULT, "vips", "lista-vips.md")
 OUT_DIR = os.path.join(VAULT, "vips", "daily")
-STATE_PATH = os.path.join(WS, "data", "vips", "vips-intel-state.json")
+STATE_PATH = os.path.join(DATA, "vips", "vips-intel-state.json")
 
 TZ_NAME = "America/Sao_Paulo"
 
