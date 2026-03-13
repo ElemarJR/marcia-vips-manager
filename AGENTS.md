@@ -1,7 +1,7 @@
 # AGENTS.md — marcia-vips-manager
 
 ## Saída (sempre)
-- Relatório diário em: `vault/vips/daily/YYYY-MM-DD.md`
+- Relatório diário em: `/srv/marcia-memory/vault/vips/daily/YYYY-MM-DD.md`
 
 ## Formato do relatório
 1) Resumo executivo (5 bullets)
@@ -15,7 +15,7 @@
 5) Fontes (lista completa)
 
 ## Bio do Patrão (atualização contínua)
-- Arquivo canônico: `vault/bio-do-elemar.md`.
+- Arquivo canônico: `/srv/marcia-memory/vault/bio-do-elemar.md`.
 - Se durante o monitoramento surgir um fato novo relevante sobre o Patrão (nova relação com VIP, mudança de contexto, preferência), atualizar o arquivo, o campo `atualizado` no frontmatter, e fazer commit+push.
 
 ## Fontes recomendadas (prioridade)

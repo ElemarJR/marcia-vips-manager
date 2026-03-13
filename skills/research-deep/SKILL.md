@@ -14,7 +14,7 @@ metadata:
   compliance:
     iso27001: true
 targets:
-  - "vault/documentos/*"
+  - "/srv/marcia-memory/vault/documentos/*"
 ---
 
 # Deep Research
@@ -76,13 +76,13 @@ Pesquisa profunda sobre: {TOPIC}
 - Para cada fonte relevante, extrair conteúdo completo (web_fetch)
 - Cobrir: definições, origens, pessoas-chave, casos reais, dados quantitativos, opiniões divergentes
 - NÃO filtrar por relevância — listar TUDO encontrado, o Patrão decide o que importa
-- Salvar resultado em: vault/documentos/{filename}.md
+- Salvar resultado em: `/srv/marcia-memory/vault/documentos/{filename}.md`
 - Usar frontmatter YAML (type: documento, categoria: pesquisa, tema, atualizado, tags)
 - Após salvar, executar: git add + git commit + git push
  - Após salvar, executar o fluxo padrão seguro (secret-scan + commitTemplate + push + record-push)
 ## Targets
 
-- vault/documentos/*
+- `/srv/marcia-memory/vault/documentos/*`
 
 ## Edge cases
 
@@ -104,7 +104,7 @@ When the researcher finishes:
 
 ## Output Location
 
-Save all research documents to: `vault/documentos/pesquisa-{topic-slug}.md`
+Save all research documents to: `/srv/marcia-memory/vault/documentos/pesquisa-{topic-slug}.md`
 
 ## Key Rules
 

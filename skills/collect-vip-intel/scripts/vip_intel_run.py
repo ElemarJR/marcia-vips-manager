@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """VIP Intel — daily collector.
 
-- Reads VIP list from vault/vips/lista-vips.md
+- Reads VIP list from /srv/marcia-memory/vault/vips/lista-vips.md
 - Collects news for YESTERDAY (America/Sao_Paulo) per company via Google News RSS
-- Prepares a markdown file: vault/vips/daily/YYYY-MM-DD.md (YYYY-MM-DD = yesterday)
-- Maintains dedupe state in vault/_estado/vips-intel-state.json
+- Prepares a markdown file: /srv/marcia-memory/vault/vips/daily/YYYY-MM-DD.md (YYYY-MM-DD = yesterday)
+- Maintains dedupe state in /srv/marcia-memory/data/vips/vips-intel-state.json
 
 LinkedIn collection is scaffolded: it expects URLs in state["linkedin_profiles"]["<Person>"]
 If URLs are missing, it will leave the section with a TODO line (no extra data).
@@ -108,9 +108,9 @@ def parse_vip_list(md_path: str):
                     people.append((person, company))
 
     if not companies:
-        raise RuntimeError("Não encontrei empresas em vault/vips/lista-vips.md (seção '## Empresas')")
+        raise RuntimeError("Não encontrei empresas em /srv/marcia-memory/vault/vips/lista-vips.md (seção '## Empresas')")
     if not people:
-        raise RuntimeError("Não encontrei pessoas em vault/vips/lista-vips.md (seção '## Pessoas')")
+        raise RuntimeError("Não encontrei pessoas em /srv/marcia-memory/vault/vips/lista-vips.md (seção '## Pessoas')")
 
     return companies, people
 
