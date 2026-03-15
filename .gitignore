@@ -2,3 +2,8 @@
 # Python
 __pycache__/
 *.pyc
+
+# OpenClaw runtime
+.openclaw/
+IDENTITY.md
+TOOLS.md
