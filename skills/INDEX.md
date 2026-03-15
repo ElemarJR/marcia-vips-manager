@@ -4,3 +4,5 @@
 - **qmd**: buscar contexto no Vault.
 - **recall-kg**: recuperar relações e contexto do KG.
 - **research-deep**: aprofundar quando um sinal exigir investigação.
+
+- **report-pipedrive**: consultas e relatórios do Pipedrive via API (read-only).
